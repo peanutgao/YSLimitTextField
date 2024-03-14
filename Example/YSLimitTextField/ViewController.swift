@@ -7,17 +7,42 @@
 //
 
 import UIKit
+import YSLimitTextField
 
 class ViewController: UIViewController {
 
+    let textField = YSLimitTextField(frame: CGRect(x: 20, y: 100, width: 120, height: 40))
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        view.addSubview(textField)
+
+        textField.borderStyle = .roundedRect
+        textField.limitType = .numbersOnly
+        textField.maxLength = 12
+        textField.groupSize = 4
+        textField.allowCopyPaste = false
+        textField.contentInsets = .init(top: 5, left: 15, bottom: 0, right: 15)
+
+        textField.backgroundColor = .lightGray
+        textField.clearButtonMode = .whileEditing
+        textField.text = "88888sss8888"
+        textField.onTextChange = { str in
+            print(str)
+        }
+        print(textField.text)
+        print(textField.text?.count)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func getText(_: Any) {
+        print(textField.text)
+        textField.text = nil
+        print(textField.text)
+    }
+    @IBAction func enableChange(_ sender: Any) {
+        
+        textField.isEnabled = !textField.isEnabled
     }
 
 }

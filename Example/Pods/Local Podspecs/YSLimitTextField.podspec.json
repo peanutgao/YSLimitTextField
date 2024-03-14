@@ -1,0 +1,22 @@
+{
+  "name": "YSLimitTextField",
+  "version": "0.1.0",
+  "summary": "A short description of YSLimitTextField.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/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/YSLimitTextField",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "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": "Joseph0750@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/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/YSLimitTextField.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "YSLimitTextField/Classes/**/*"
+}

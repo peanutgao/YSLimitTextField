@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		017591AF1A3055FCEAD10CA1B047CAD5 /* Pods-YSLimitTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 567E9708D926CB5097EDDE1B89F2450A /* Pods-YSLimitTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FC4F7FC2FCB61315E56914C4D8B1373 /* YSLimitTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB17B5441069BB9A6D0758882ACADEB /* YSLimitTextField.swift */; };
+		1D2CB61826DBC99869B89ACF2D6C9B79 /* Pods-YSLimitTextField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D2DDC023DE34B8B8F74785AADF2752 /* Pods-YSLimitTextField_Example-dummy.m */; };
+		39D5C23EB46DBFA72E1C0C01C0FD6470 /* YSLimitTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77694F5F242AE7D8291E6EA8437104 /* YSLimitTextField-dummy.m */; };
+		4E00B991FB2973A591B9B34710EAD25D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8340ABCD1A0AA17436DCC818648211E1 /* YSLimitTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BD1DEBA9BEB17BC2D7C178E41CB4CAE /* YSLimitTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		912B4CC6905F8D65D6A0634542A91355 /* Pods-YSLimitTextField_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CAAE63E652609C45A930DE385CC86402 /* Pods-YSLimitTextField_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5DD1E43CCE3A2FBBD041B207CB5BF8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D9C1EDF2A9BD01A7BA60BDE26B325025 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EF502F1E1FAB3D97AC4E5D4ECB20A275 /* Pods-YSLimitTextField_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF20E1FDE2B8EE3786A99A3539FA906 /* Pods-YSLimitTextField_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6F1551C4D5EA2A162C561A66CAA74B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 551CA112537F03DB40ABC79E48AE0A19;
+			remoteInfo = "Pods-YSLimitTextField_Example";
+		};
+		F2609FF299B64626B542BDC2D48B2F35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5815773724129715561198D4D46F1BDF;
+			remoteInfo = YSLimitTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1197FD733BA79586E070EAC4FABFC42F /* Pods-YSLimitTextField_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YSLimitTextField_Tests-Info.plist"; sourceTree = "<group>"; };
+		19B21DF87EC932E13377BB0FCB18B5AF /* YSLimitTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YSLimitTextField.release.xcconfig; sourceTree = "<group>"; };
+		294F0FF0DFA9D83745D8AE2833C93437 /* Pods-YSLimitTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YSLimitTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		346AF11BBEACB0BB472A970888BE730B /* Pods-YSLimitTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSLimitTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3BD1DEBA9BEB17BC2D7C178E41CB4CAE /* YSLimitTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YSLimitTextField-umbrella.h"; sourceTree = "<group>"; };
+		4000B936CB0BA79DCC6ADA259ED47096 /* YSLimitTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YSLimitTextField.modulemap; sourceTree = "<group>"; };
+		43C2C6B7C77BAEA864E544EFBA3CAFE1 /* Pods-YSLimitTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YSLimitTextField_Example.modulemap"; sourceTree = "<group>"; };
+		4DE4F16A6228DF7AFEAB7B3CF1435227 /* Pods-YSLimitTextField_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YSLimitTextField_Tests"; path = Pods_YSLimitTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54477B444CEC5C2027F2C7745D81DADB /* YSLimitTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YSLimitTextField-Info.plist"; sourceTree = "<group>"; };
+		567E9708D926CB5097EDDE1B89F2450A /* Pods-YSLimitTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YSLimitTextField_Example-umbrella.h"; sourceTree = "<group>"; };
+		599089AEF57E142A5530718773FC7B02 /* Pods-YSLimitTextField_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YSLimitTextField_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E46F50E8CDB328CA5A9023B353110AB /* Pods-YSLimitTextField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YSLimitTextField_Example-Info.plist"; sourceTree = "<group>"; };
+		640372ADEB6B3D10512DBB87F6313B85 /* YSLimitTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YSLimitTextField.debug.xcconfig; sourceTree = "<group>"; };
+		687549AEE5FAA3EA5E9C8683F483CFC6 /* Pods-YSLimitTextField_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-YSLimitTextField_Example"; path = Pods_YSLimitTextField_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CDD5AEF8B28E62D7D098AD601EC49C7 /* YSLimitTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YSLimitTextField-prefix.pch"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7C77694F5F242AE7D8291E6EA8437104 /* YSLimitTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YSLimitTextField-dummy.m"; sourceTree = "<group>"; };
+		7FCD32BB54BB1D184979C1599F927339 /* YSLimitTextField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YSLimitTextField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8AF20E1FDE2B8EE3786A99A3539FA906 /* Pods-YSLimitTextField_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YSLimitTextField_Tests-dummy.m"; sourceTree = "<group>"; };
+		8CDE410F95A8CB56AF801654A60B4C72 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		930B8C668ECBC463A7869554F17071F1 /* Pods-YSLimitTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSLimitTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DB28B59ED9E1BA4D325AE2E38C888B1 /* Pods-YSLimitTextField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YSLimitTextField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6C3DAFF0B424293697A104881CF2F56 /* Pods-YSLimitTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSLimitTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6C9E5757EA751ACC26A2DCDCE304D19 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CAAE63E652609C45A930DE385CC86402 /* Pods-YSLimitTextField_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YSLimitTextField_Tests-umbrella.h"; sourceTree = "<group>"; };
+		CFBBF73A41EA4AA03D7D0C7617541E25 /* YSLimitTextField */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YSLimitTextField; path = YSLimitTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72E1E9DBB664B32CB8A497EA3FB69D3 /* Pods-YSLimitTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YSLimitTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		DAB17B5441069BB9A6D0758882ACADEB /* YSLimitTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YSLimitTextField.swift; path = YSLimitTextField/Classes/YSLimitTextField.swift; sourceTree = "<group>"; };
+		DDCEFC8ADA2AD3BAF828D9ADB32A123A /* Pods-YSLimitTextField_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YSLimitTextField_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F570AC2E134F8D54816E4AB1A8328C46 /* Pods-YSLimitTextField_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YSLimitTextField_Tests.modulemap"; sourceTree = "<group>"; };
+		F5D2DDC023DE34B8B8F74785AADF2752 /* Pods-YSLimitTextField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YSLimitTextField_Example-dummy.m"; sourceTree = "<group>"; };
+		F9CA43FE3A29602BAA5FEA23D85E338B /* Pods-YSLimitTextField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YSLimitTextField_Example-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		248CF3D2404947EA936999084182BE7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5DD1E43CCE3A2FBBD041B207CB5BF8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A95B51426DC7DDC8300261733BDF772 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C1EDF2A9BD01A7BA60BDE26B325025 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C8DA81B823AE743D17E9D8D181C54DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E00B991FB2973A591B9B34710EAD25D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26E854DF1DF3131DE78243160420D98E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63E085E6BA6896AE1ECB2433AC4B51B2 /* Pods-YSLimitTextField_Example */,
+				7F7611FA8C35761125E376EC1C6CB510 /* Pods-YSLimitTextField_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E73316CC09D223AE8734BD9D4216F36 /* YSLimitTextField */ = {
+			isa = PBXGroup;
+			children = (
+				DAB17B5441069BB9A6D0758882ACADEB /* YSLimitTextField.swift */,
+				F50F3C7202A8B6126C1A61A05A895BCF /* Pod */,
+				D1906C20D58EBCF365744FF253682003 /* Support Files */,
+			);
+			name = YSLimitTextField;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		63E085E6BA6896AE1ECB2433AC4B51B2 /* Pods-YSLimitTextField_Example */ = {
+			isa = PBXGroup;
+			children = (
+				43C2C6B7C77BAEA864E544EFBA3CAFE1 /* Pods-YSLimitTextField_Example.modulemap */,
+				9DB28B59ED9E1BA4D325AE2E38C888B1 /* Pods-YSLimitTextField_Example-acknowledgements.markdown */,
+				294F0FF0DFA9D83745D8AE2833C93437 /* Pods-YSLimitTextField_Example-acknowledgements.plist */,
+				F5D2DDC023DE34B8B8F74785AADF2752 /* Pods-YSLimitTextField_Example-dummy.m */,
+				F9CA43FE3A29602BAA5FEA23D85E338B /* Pods-YSLimitTextField_Example-frameworks.sh */,
+				5E46F50E8CDB328CA5A9023B353110AB /* Pods-YSLimitTextField_Example-Info.plist */,
+				567E9708D926CB5097EDDE1B89F2450A /* Pods-YSLimitTextField_Example-umbrella.h */,
+				D72E1E9DBB664B32CB8A497EA3FB69D3 /* Pods-YSLimitTextField_Example.debug.xcconfig */,
+				346AF11BBEACB0BB472A970888BE730B /* Pods-YSLimitTextField_Example.release.xcconfig */,
+			);
+			name = "Pods-YSLimitTextField_Example";
+			path = "Target Support Files/Pods-YSLimitTextField_Example";
+			sourceTree = "<group>";
+		};
+		7F7611FA8C35761125E376EC1C6CB510 /* Pods-YSLimitTextField_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F570AC2E134F8D54816E4AB1A8328C46 /* Pods-YSLimitTextField_Tests.modulemap */,
+				DDCEFC8ADA2AD3BAF828D9ADB32A123A /* Pods-YSLimitTextField_Tests-acknowledgements.markdown */,
+				599089AEF57E142A5530718773FC7B02 /* Pods-YSLimitTextField_Tests-acknowledgements.plist */,
+				8AF20E1FDE2B8EE3786A99A3539FA906 /* Pods-YSLimitTextField_Tests-dummy.m */,
+				1197FD733BA79586E070EAC4FABFC42F /* Pods-YSLimitTextField_Tests-Info.plist */,
+				CAAE63E652609C45A930DE385CC86402 /* Pods-YSLimitTextField_Tests-umbrella.h */,
+				B6C3DAFF0B424293697A104881CF2F56 /* Pods-YSLimitTextField_Tests.debug.xcconfig */,
+				930B8C668ECBC463A7869554F17071F1 /* Pods-YSLimitTextField_Tests.release.xcconfig */,
+			);
+			name = "Pods-YSLimitTextField_Tests";
+			path = "Target Support Files/Pods-YSLimitTextField_Tests";
+			sourceTree = "<group>";
+		};
+		AC3B83BD75870C04A5C789B636C1EE9F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E73316CC09D223AE8734BD9D4216F36 /* YSLimitTextField */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C6A784C7058A7A1556FEB91509A0F20A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				687549AEE5FAA3EA5E9C8683F483CFC6 /* Pods-YSLimitTextField_Example */,
+				4DE4F16A6228DF7AFEAB7B3CF1435227 /* Pods-YSLimitTextField_Tests */,
+				CFBBF73A41EA4AA03D7D0C7617541E25 /* YSLimitTextField */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				AC3B83BD75870C04A5C789B636C1EE9F /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				C6A784C7058A7A1556FEB91509A0F20A /* Products */,
+				26E854DF1DF3131DE78243160420D98E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D1906C20D58EBCF365744FF253682003 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4000B936CB0BA79DCC6ADA259ED47096 /* YSLimitTextField.modulemap */,
+				7C77694F5F242AE7D8291E6EA8437104 /* YSLimitTextField-dummy.m */,
+				54477B444CEC5C2027F2C7745D81DADB /* YSLimitTextField-Info.plist */,
+				6CDD5AEF8B28E62D7D098AD601EC49C7 /* YSLimitTextField-prefix.pch */,
+				3BD1DEBA9BEB17BC2D7C178E41CB4CAE /* YSLimitTextField-umbrella.h */,
+				640372ADEB6B3D10512DBB87F6313B85 /* YSLimitTextField.debug.xcconfig */,
+				19B21DF87EC932E13377BB0FCB18B5AF /* YSLimitTextField.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/YSLimitTextField";
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F50F3C7202A8B6126C1A61A05A895BCF /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8CDE410F95A8CB56AF801654A60B4C72 /* LICENSE */,
+				C6C9E5757EA751ACC26A2DCDCE304D19 /* README.md */,
+				7FCD32BB54BB1D184979C1599F927339 /* YSLimitTextField.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B010CD0EE5BFB4AA1FEE36A5775B22 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017591AF1A3055FCEAD10CA1B047CAD5 /* Pods-YSLimitTextField_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C864F5484B5957263AECB04A5B58559C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912B4CC6905F8D65D6A0634542A91355 /* Pods-YSLimitTextField_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F58B71095C28F3614603C99EC562D668 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8340ABCD1A0AA17436DCC818648211E1 /* YSLimitTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		551CA112537F03DB40ABC79E48AE0A19 /* Pods-YSLimitTextField_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D38103DDD3DF1FA3108AE2464E744F26 /* Build configuration list for PBXNativeTarget "Pods-YSLimitTextField_Example" */;
+			buildPhases = (
+				29B010CD0EE5BFB4AA1FEE36A5775B22 /* Headers */,
+				22C1ACEA3F62777F36CF28CE59E8CF80 /* Sources */,
+				248CF3D2404947EA936999084182BE7B /* Frameworks */,
+				FAA3AE032493286F51AF70D99900E14E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E70D8E296DD22B8832D4CC5C109A51C6 /* PBXTargetDependency */,
+			);
+			name = "Pods-YSLimitTextField_Example";
+			productName = Pods_YSLimitTextField_Example;
+			productReference = 687549AEE5FAA3EA5E9C8683F483CFC6 /* Pods-YSLimitTextField_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		5815773724129715561198D4D46F1BDF /* YSLimitTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE90E86F3CC3071F78F6DCDF05B8F9D1 /* Build configuration list for PBXNativeTarget "YSLimitTextField" */;
+			buildPhases = (
+				F58B71095C28F3614603C99EC562D668 /* Headers */,
+				14F6806B4154330AE3940BB49ED1F7CB /* Sources */,
+				8C8DA81B823AE743D17E9D8D181C54DB /* Frameworks */,
+				6A27A6318266FC232964AD84D4642228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YSLimitTextField;
+			productName = YSLimitTextField;
+			productReference = CFBBF73A41EA4AA03D7D0C7617541E25 /* YSLimitTextField */;
+			productType = "com.apple.product-type.framework";
+		};
+		D3F34DD321BD3E1E82C355E1D815903B /* Pods-YSLimitTextField_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CF00A9FF3963F379788A9AC53310BD0 /* Build configuration list for PBXNativeTarget "Pods-YSLimitTextField_Tests" */;
+			buildPhases = (
+				C864F5484B5957263AECB04A5B58559C /* Headers */,
+				2267DAC83D8CD2E03D96C52CAAA267FC /* Sources */,
+				4A95B51426DC7DDC8300261733BDF772 /* Frameworks */,
+				D14C5CFA63DFCB603A707A146551A9C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3EB47C445F7CC91AE7ECF916A7B7878 /* PBXTargetDependency */,
+			);
+			name = "Pods-YSLimitTextField_Tests";
+			productName = Pods_YSLimitTextField_Tests;
+			productReference = 4DE4F16A6228DF7AFEAB7B3CF1435227 /* Pods-YSLimitTextField_Tests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C6A784C7058A7A1556FEB91509A0F20A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				551CA112537F03DB40ABC79E48AE0A19 /* Pods-YSLimitTextField_Example */,
+				D3F34DD321BD3E1E82C355E1D815903B /* Pods-YSLimitTextField_Tests */,
+				5815773724129715561198D4D46F1BDF /* YSLimitTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A27A6318266FC232964AD84D4642228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14C5CFA63DFCB603A707A146551A9C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA3AE032493286F51AF70D99900E14E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14F6806B4154330AE3940BB49ED1F7CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC4F7FC2FCB61315E56914C4D8B1373 /* YSLimitTextField.swift in Sources */,
+				39D5C23EB46DBFA72E1C0C01C0FD6470 /* YSLimitTextField-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2267DAC83D8CD2E03D96C52CAAA267FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF502F1E1FAB3D97AC4E5D4ECB20A275 /* Pods-YSLimitTextField_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22C1ACEA3F62777F36CF28CE59E8CF80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2CB61826DBC99869B89ACF2D6C9B79 /* Pods-YSLimitTextField_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3EB47C445F7CC91AE7ECF916A7B7878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-YSLimitTextField_Example";
+			target = 551CA112537F03DB40ABC79E48AE0A19 /* Pods-YSLimitTextField_Example */;
+			targetProxy = C6F1551C4D5EA2A162C561A66CAA74B1 /* PBXContainerItemProxy */;
+		};
+		E70D8E296DD22B8832D4CC5C109A51C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YSLimitTextField;
+			target = 5815773724129715561198D4D46F1BDF /* YSLimitTextField */;
+			targetProxy = F2609FF299B64626B542BDC2D48B2F35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0607283125D43FB11FAD511E69BB849C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C3DAFF0B424293697A104881CF2F56 /* Pods-YSLimitTextField_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YSLimitTextField_Tests/Pods-YSLimitTextField_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YSLimitTextField_Tests/Pods-YSLimitTextField_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47E78EB3DA59A26CF210AC232AF159CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19B21DF87EC932E13377BB0FCB18B5AF /* YSLimitTextField.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YSLimitTextField/YSLimitTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YSLimitTextField/YSLimitTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YSLimitTextField/YSLimitTextField.modulemap";
+				PRODUCT_MODULE_NAME = YSLimitTextField;
+				PRODUCT_NAME = YSLimitTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6AA7F141554B671D49F0D1A071631B47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346AF11BBEACB0BB472A970888BE730B /* Pods-YSLimitTextField_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YSLimitTextField_Example/Pods-YSLimitTextField_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YSLimitTextField_Example/Pods-YSLimitTextField_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9C894D886C7CC86EC71D65F88C2001A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 640372ADEB6B3D10512DBB87F6313B85 /* YSLimitTextField.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YSLimitTextField/YSLimitTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YSLimitTextField/YSLimitTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YSLimitTextField/YSLimitTextField.modulemap";
+				PRODUCT_MODULE_NAME = YSLimitTextField;
+				PRODUCT_NAME = YSLimitTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C72B66C97D4FDCB05FF5C75E92473EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D72E1E9DBB664B32CB8A497EA3FB69D3 /* Pods-YSLimitTextField_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YSLimitTextField_Example/Pods-YSLimitTextField_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YSLimitTextField_Example/Pods-YSLimitTextField_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D76A5730E5653576F217FFAC6180C12D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930B8C668ECBC463A7869554F17071F1 /* Pods-YSLimitTextField_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-YSLimitTextField_Tests/Pods-YSLimitTextField_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-YSLimitTextField_Tests/Pods-YSLimitTextField_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CF00A9FF3963F379788A9AC53310BD0 /* Build configuration list for PBXNativeTarget "Pods-YSLimitTextField_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0607283125D43FB11FAD511E69BB849C /* Debug */,
+				D76A5730E5653576F217FFAC6180C12D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE90E86F3CC3071F78F6DCDF05B8F9D1 /* Build configuration list for PBXNativeTarget "YSLimitTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C894D886C7CC86EC71D65F88C2001A5 /* Debug */,
+				47E78EB3DA59A26CF210AC232AF159CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D38103DDD3DF1FA3108AE2464E744F26 /* Build configuration list for PBXNativeTarget "Pods-YSLimitTextField_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C72B66C97D4FDCB05FF5C75E92473EF5 /* Debug */,
+				6AA7F141554B671D49F0D1A071631B47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

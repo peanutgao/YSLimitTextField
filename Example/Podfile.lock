@@ -1,0 +1,16 @@
+PODS:
+  - YSLimitTextField (0.1.0)
+
+DEPENDENCIES:
+  - YSLimitTextField (from `../`)
+
+EXTERNAL SOURCES:
+  YSLimitTextField:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  YSLimitTextField: 45047055cfcd0cdf05bae7725ba5caad34ef6871
+
+PODFILE CHECKSUM: 14bca0588fdad3076dfd0669bb35012e9f73dc90
+
+COCOAPODS: 1.14.3
