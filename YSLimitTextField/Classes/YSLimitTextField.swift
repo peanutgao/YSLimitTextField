@@ -156,7 +156,7 @@ private extension YSLimitTextField {
     func setupClearButton() {
         let margin: CGFloat = 5.0
         let wh: CGFloat = 16.0
-        clearButton.setImage(UIImage(named: "ic_close_blue"), for: .normal)
+        clearButton.setImage(UIImage(named: "ic_close_green"), for: .normal)
         clearButton.addTarget(self, action: #selector(clearTextField), for: .touchUpInside)
         clearButton.frame = CGRect(x: margin, y: 0, width: wh, height: wh)
         clearButtonWrapper.addSubview(clearButton)
