@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'YSLimitTextField'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of YSLimitTextField.'
+  s.summary          = 'YSLimitTextField is a custom UITextField that can add some restrictions'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,23 +18,24 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  YSLimitTextField is a custom UITextField that can add some restrictions. including length, input character restrictions, etc.
                        DESC
 
-  s.homepage         = 'https://github.com/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/YSLimitTextField'
+  s.homepage         = 'https://github.com/peanutgao/YSLimitTextField'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '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' => 'Joseph0750@gmail.com' }
-  s.source           = { :git => 'https://github.com/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/YSLimitTextField.git', :tag => s.version.to_s }
+  s.author           = { 'peanutgao' => 'Joseph0750@gmail.com' }
+  s.source           = { :git => 'https://github.com/peanutgao/YSLimitTextField.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'YSLimitTextField/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'YSLimitTextField' => ['YSLimitTextField/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'YSLimitTextField' => ['YSLimitTextField/PrivacyInfo.xcprivacy']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
