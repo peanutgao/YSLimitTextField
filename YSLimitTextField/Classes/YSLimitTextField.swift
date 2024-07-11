@@ -1,8 +1,13 @@
 //
+// *************************************************
 //  YSLimitTextField.swift
 //  YSLimitTextField
 //
-//  Created by Joseph Koh on 2023/12/31.
+// Created by Joseph Koh on 2023/11/14.
+// Author: Joseph Koh
+// Email: Joseph0750@gmail.com
+// Create Time: 2023/11/14 00:55
+// *************************************************
 //
 
 import UIKit
@@ -25,6 +30,14 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         case none
         case uppercase
         case lowercase
+    }
+
+    public enum PreformActionType {
+        case none
+        case copy
+        case paste
+        case copyAndPaste
+        case all
     }
 
     public var limitType: LimitType = .none {
@@ -69,8 +82,8 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         }
     }
 
-    public var allowCopyPaste = true
-    public let clearButton = UIButton()
+    public var allowedPreformAction: PreformActionType = .all
+    public let customClearButton = UIButton()
     private let clearButtonWrapper = UIView()
     private let leftWrapperView = UIView()
 
@@ -84,14 +97,14 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         }
     }
 
-    override public var text: String? {
+    public override var text: String? {
         didSet {
             updateClearButton()
             applyTextLimit()
         }
     }
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
     }
@@ -101,15 +114,47 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         initialSetup()
     }
 
-    override public func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
 
         leftWrapperView.bounds = CGRect(x: 0, y: 0, width: contentInsets.left, height: bounds.size.height)
     }
 
-    override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        if !allowCopyPaste, action == #selector(copy(_:)) || action == #selector(paste(_:)) {
+    public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+        switch allowedPreformAction {
+        case .none:
             return false
+        case .copy:
+            if action == #selector(copy(_:)) {
+                return true
+            } else if action == #selector(paste(_:))
+                || action == #selector(cut(_:))
+                || action == #selector(select(_:))
+                || action == #selector(selectAll(_:))
+            {
+                return false
+            }
+        case .paste:
+            if action == #selector(paste(_:)) {
+                return true
+            } else if action == #selector(copy(_:))
+                || action == #selector(cut(_:))
+                || action == #selector(select(_:))
+                || action == #selector(selectAll(_:))
+            {
+                return false
+            }
+        case .copyAndPaste:
+            if action == #selector(copy(_:)) || action == #selector(paste(_:)) {
+                return true
+            } else if action == #selector(cut(_:))
+                || action == #selector(select(_:))
+                || action == #selector(selectAll(_:))
+            {
+                return false
+            }
+        case .all:
+            break
         }
         return super.canPerformAction(action, withSender: sender)
     }
@@ -137,6 +182,7 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
 
 private extension YSLimitTextField {
     func initialSetup() {
+        autocorrectionType = .no
         layer.borderColor = borderColor?.cgColor ?? nil
 
         setupLeftPadding()
@@ -156,10 +202,10 @@ private extension YSLimitTextField {
     func setupClearButton() {
         let margin: CGFloat = 5.0
         let wh: CGFloat = 16.0
-        clearButton.setImage(UIImage(named: "ic_close_green"), for: .normal)
-        clearButton.addTarget(self, action: #selector(clearTextField), for: .touchUpInside)
-        clearButton.frame = CGRect(x: margin, y: 0, width: wh, height: wh)
-        clearButtonWrapper.addSubview(clearButton)
+        customClearButton.setImage(UIImage(named: "ic_close_blue"), for: .normal)
+        customClearButton.addTarget(self, action: #selector(clearTextField), for: .touchUpInside)
+        customClearButton.frame = CGRect(x: margin, y: 0, width: wh, height: wh)
+        clearButtonWrapper.addSubview(customClearButton)
 
         rightView = clearButtonWrapper
         rightViewMode = .always
@@ -170,14 +216,14 @@ private extension YSLimitTextField {
     func updateClearButton() {
         if clearButtonMode == .whileEditing {
             if let _text = text, !_text.isEmpty, isEditing {
-                clearButton.isHidden = false
+                customClearButton.isHidden = false
             } else {
-                clearButton.isHidden = true
+                customClearButton.isHidden = true
             }
         } else if clearButtonMode == .always {
-            clearButton.isHidden = false
+            customClearButton.isHidden = false
         } else {
-            clearButton.isHidden = true
+            customClearButton.isHidden = true
         }
 
         updateClearButtonWidth()
@@ -187,7 +233,7 @@ private extension YSLimitTextField {
         if clearButtonMode == .whileEditing || clearButtonMode == .always {
             let margin: CGFloat = 5.0
             let wh: CGFloat = 16.0
-            let w = clearButton.isHidden ? contentInsets.right : wh + margin + contentInsets.right
+            let w = customClearButton.isHidden ? contentInsets.right : wh + margin + contentInsets.right
             clearButtonWrapper.bounds = CGRect(x: 0, y: 0, width: w, height: wh)
         }
     }
@@ -212,7 +258,7 @@ private extension YSLimitTextField {
         editStatusChange?(true)
 
         if clearButtonMode != .never {
-            clearButton.isHidden = (text?.count ?? 0) == 0
+            customClearButton.isHidden = (text?.count ?? 0) == 0
             updateClearButtonWidth()
         }
     }
@@ -221,7 +267,7 @@ private extension YSLimitTextField {
         layer.borderColor = borderColor?.cgColor ?? nil
 
         if clearButtonMode != .always {
-            clearButton.isHidden = true
+            customClearButton.isHidden = true
             updateClearButtonWidth()
         }
 
@@ -307,7 +353,7 @@ private extension YSLimitTextField {
 
 public protocol YSLimitCreateProtocol {}
 
-public extension YSLimitCreateProtocol where Self: YSLimitTextField {
+extension YSLimitCreateProtocol where Self: YSLimitTextField {
     @discardableResult
     func setLimitType(_ limitType: LimitType) -> Self {
         self.limitType = limitType
@@ -357,8 +403,8 @@ public extension YSLimitCreateProtocol where Self: YSLimitTextField {
     }
 
     @discardableResult
-    func setIsCopyPasteEnabled(_ isCopyPasteEnabled: Bool) -> Self {
-        self.allowCopyPaste = isCopyPasteEnabled
+    func setAllowedPreformAction(_ type: PreformActionType) -> Self {
+        self.allowedPreformAction = type
         return self
     }
 
@@ -373,9 +419,21 @@ public extension YSLimitCreateProtocol where Self: YSLimitTextField {
         onTextChange = action
         return self
     }
+
+    @discardableResult
+    func onEditStatusChange(_ action: @escaping (Bool) -> Void) -> Self {
+        editStatusChange = action
+        return self
+    }
+
+    @discardableResult
+    func onReturnButtonClick(_ action: @escaping () -> Void) -> Self {
+        returnButtonClickHandler = action
+        return self
+    }
 }
 
-public extension Character {
+extension Character {
     var isEnglishLatter: Bool {
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".contains(self)
     }

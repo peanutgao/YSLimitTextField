@@ -11,7 +11,7 @@ import YSLimitTextField
 
 class ViewController: UIViewController {
 
-    let textField = YSLimitTextField(frame: CGRect(x: 20, y: 100, width: 120, height: 40))
+    let textField = YSLimitTextField(frame: CGRect(x: 20, y: 100, width: 200, height: 40))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +22,12 @@ class ViewController: UIViewController {
         textField.limitType = .numbersOnly
         textField.maxLength = 12
         textField.groupSize = 4
-        textField.allowCopyPaste = false
+        textField.allowedPreformAction = .paste
         textField.contentInsets = .init(top: 5, left: 15, bottom: 0, right: 15)
 
         textField.backgroundColor = .lightGray
         textField.clearButtonMode = .whileEditing
-        textField.text = "88888sss8888"
+        textField.text = "88888sss8888" // 123131231231
         textField.onTextChange = { str in
             print(str)
         }

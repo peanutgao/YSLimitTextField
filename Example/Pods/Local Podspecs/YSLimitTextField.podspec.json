@@ -1,22 +1,29 @@
 {
   "name": "YSLimitTextField",
-  "version": "0.1.0",
-  "summary": "A short description of YSLimitTextField.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/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/YSLimitTextField",
+  "version": "0.1.1",
+  "summary": "YSLimitTextField is a custom UITextField that can add some restrictions",
+  "description": "YSLimitTextField is a custom UITextField that can add some restrictions. including length, input character restrictions, etc.",
+  "homepage": "https://github.com/peanutgao/YSLimitTextField",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "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": "Joseph0750@gmail.com"
+    "peanutgao": "Joseph0750@gmail.com"
   },
   "source": {
-    "git": "https://github.com/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/YSLimitTextField.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/peanutgao/YSLimitTextField.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "YSLimitTextField/Classes/**/*"
+  "swift_versions": "5.0",
+  "source_files": "YSLimitTextField/Classes/**/*",
+  "resource_bundles": {
+    "YSLimitTextField": [
+      "YSLimitTextField/PrivacyInfo.xcprivacy"
+    ]
+  },
+  "swift_version": "5.0"
 }
