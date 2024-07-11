@@ -9,7 +9,7 @@ import Foundation
 
 public extension Character {
     var isEnglishLetter: Bool {
-        isASCII && isLetter
+        isASCII && "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".contains(self)
     }
 
     var isEmailLetter: Bool {
