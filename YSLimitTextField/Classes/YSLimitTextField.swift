@@ -97,14 +97,14 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         }
     }
 
-    public override var text: String? {
+    override public var text: String? {
         didSet {
             updateClearButton()
             applyTextLimit()
         }
     }
 
-    public override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
     }
@@ -114,13 +114,13 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         initialSetup()
     }
 
-    public override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
 
         leftWrapperView.bounds = CGRect(x: 0, y: 0, width: contentInsets.left, height: bounds.size.height)
     }
 
-    public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
+    override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         switch allowedPreformAction {
         case .none:
             return false
@@ -293,16 +293,16 @@ private extension YSLimitTextField {
         case .numbersOnly:
             processedText = processedText.filter(\.isNumber)
         case .lettersOnly:
-            processedText = processedText.filter(\.isEnglishLatter)
+            processedText = processedText.filter(\.isEnglishLetter)
         case .lettersAndSpacesOnly:
-            processedText = processedText.filter { $0.isEnglishLatter || $0.isWhitespace }
+            processedText = processedText.filter { $0.isEnglishLetter || $0.isWhitespace }
         case .wordsAndSpacesOnly:
             processedText = processedText.filter { $0.isLetter || $0.isWhitespace }
         case .lettersAndPuncturation:
             processedText = processedText
-                .filter { $0.isEnglishLatter || $0.isWhitespace || $0.isEnglishLetterPunctuationOrSpace }
+                .filter { $0.isEnglishLetter || $0.isWhitespace || $0.isEnglishLetterPunctuationOrSpace }
         case .email:
-            processedText = processedText.filter(\.isEmailLatter)
+            processedText = processedText.filter(\.isEmailLetter)
         }
 
         switch letterCase {
@@ -353,7 +353,7 @@ private extension YSLimitTextField {
 
 public protocol YSLimitCreateProtocol {}
 
-extension YSLimitCreateProtocol where Self: YSLimitTextField {
+public extension YSLimitCreateProtocol where Self: YSLimitTextField {
     @discardableResult
     func setLimitType(_ limitType: LimitType) -> Self {
         self.limitType = limitType
@@ -430,20 +430,5 @@ extension YSLimitCreateProtocol where Self: YSLimitTextField {
     func onReturnButtonClick(_ action: @escaping () -> Void) -> Self {
         returnButtonClickHandler = action
         return self
-    }
-}
-
-extension Character {
-    var isEnglishLatter: Bool {
-        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".contains(self)
-    }
-
-    var isEmailLatter: Bool {
-        "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.".contains(self)
-    }
-
-    var isEnglishLetterPunctuationOrSpace: Bool {
-        let allowedCharacterSet = CharacterSet.letters.union(.punctuationCharacters).union(.whitespaces)
-        return String(self).rangeOfCharacter(from: allowedCharacterSet) != nil
     }
 }

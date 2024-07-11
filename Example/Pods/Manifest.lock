@@ -1,5 +1,5 @@
 PODS:
-  - YSLimitTextField (0.1.1)
+  - YSLimitTextField (0.1.2)
 
 DEPENDENCIES:
   - YSLimitTextField (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  YSLimitTextField: 37e5222bb7aa9b851ff4e91677e698aae8b11ab1
+  YSLimitTextField: 4ae5ed1068f2423c7456fc9790b133b74f42bb5c
 
 PODFILE CHECKSUM: 14bca0588fdad3076dfd0669bb35012e9f73dc90
 
