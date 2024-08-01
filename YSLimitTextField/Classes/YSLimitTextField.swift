@@ -14,6 +14,7 @@ import UIKit
 
 // MARK: - YSLimitTextField
 
+@objc(YSLimitTextField)
 public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
     public enum LimitType {
         case none
@@ -101,6 +102,24 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         didSet {
             updateClearButton()
             applyTextLimit()
+        }
+    }
+
+    @objc public dynamic var placeholderColor: UIColor? {
+        didSet {
+            updatePlaceholder()
+        }
+    }
+
+    override public var placeholder: String? {
+        didSet {
+            updatePlaceholder()
+        }
+    }
+
+    override public var font: UIFont? {
+        didSet {
+            updatePlaceholder()
         }
     }
 
@@ -283,7 +302,9 @@ private extension YSLimitTextField {
     }
 
     func applyTextLimit() {
-        guard let text else { return }
+        guard let text else {
+            return
+        }
 
         var processedText = text
 
@@ -349,6 +370,22 @@ private extension YSLimitTextField {
     }
 }
 
+private extension YSLimitTextField {
+    func updatePlaceholder() {
+        guard let placeholder, let font else {
+            return
+        }
+
+        var attributes: [NSAttributedString.Key: Any] = [.font: font]
+
+        if let placeholderColor {
+            attributes[NSAttributedString.Key.foregroundColor] = placeholderColor
+        }
+
+        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
+    }
+}
+
 // MARK: - YSLimitCreateProtocol
 
 public protocol YSLimitCreateProtocol {}
@@ -404,7 +441,7 @@ public extension YSLimitCreateProtocol where Self: YSLimitTextField {
 
     @discardableResult
     func setAllowedPreformAction(_ type: PreformActionType) -> Self {
-        self.allowedPreformAction = type
+        allowedPreformAction = type
         return self
     }
 
