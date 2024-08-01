@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YSLimitTextField'
-  s.version          = '0.1.4'
+  s.version          = '0.2.0'
   s.summary          = 'YSLimitTextField is a custom UITextField that can add some restrictions'
 
 # This description is used to generate tags and improve search results.
