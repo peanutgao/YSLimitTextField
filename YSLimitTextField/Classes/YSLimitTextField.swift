@@ -25,6 +25,7 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         case lettersAndPuncturation
         case wordsAndSpacesOnly
         case email
+        case condition((Character) -> Bool)
     }
 
     public enum LetterCase {
@@ -324,6 +325,8 @@ private extension YSLimitTextField {
                 .filter { $0.isEnglishLetter || $0.isWhitespace || $0.isEnglishLetterPunctuationOrSpace }
         case .email:
             processedText = processedText.filter(\.isEmailLetter)
+        case .condition(let condition):
+            processedText = processedText.filter(condition)
         }
 
         switch letterCase {
