@@ -20,6 +20,7 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
         case none
         case numbersOnly
         case lettersOnly
+        case lettersAndNumbers
         case lettersAndSpacesOnly
         /// a-z
         case lettersAndPuncturation
@@ -316,6 +317,8 @@ private extension YSLimitTextField {
             processedText = processedText.filter(\.isNumber)
         case .lettersOnly:
             processedText = processedText.filter(\.isEnglishLetter)
+        case .lettersAndNumbers:
+            processedText = processedText.filter { $0.isEnglishLetter || $0.isNumber }    
         case .lettersAndSpacesOnly:
             processedText = processedText.filter { $0.isEnglishLetter || $0.isWhitespace }
         case .wordsAndSpacesOnly:
@@ -327,6 +330,7 @@ private extension YSLimitTextField {
             processedText = processedText.filter(\.isEmailLetter)
         case .condition(let condition):
             processedText = processedText.filter(condition)
+   
         }
 
         switch letterCase {
