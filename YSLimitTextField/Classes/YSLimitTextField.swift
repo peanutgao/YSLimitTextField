@@ -138,42 +138,48 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
     override public func layoutSubviews() {
         super.layoutSubviews()
 
-        leftWrapperView.bounds = CGRect(x: 0, y: 0, width: contentInsets.left, height: bounds.size.height)
+        leftWrapperView.bounds = CGRect(
+            x: 0, y: 0, width: contentInsets.left, height: bounds.size.height
+        )
     }
 
     override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         switch allowedPreformAction {
         case .none:
             return false
+
         case .copy:
             if action == #selector(copy(_:)) {
                 return true
-            } else if action == #selector(paste(_:))
+            }
+            else if action == #selector(paste(_:))
                 || action == #selector(cut(_:))
                 || action == #selector(select(_:))
-                || action == #selector(selectAll(_:))
-            {
+                || action == #selector(selectAll(_:)) {
                 return false
             }
+
         case .paste:
             if action == #selector(paste(_:)) {
                 return true
-            } else if action == #selector(copy(_:))
+            }
+            else if action == #selector(copy(_:))
                 || action == #selector(cut(_:))
                 || action == #selector(select(_:))
-                || action == #selector(selectAll(_:))
-            {
+                || action == #selector(selectAll(_:)) {
                 return false
             }
+
         case .copyAndPaste:
             if action == #selector(copy(_:)) || action == #selector(paste(_:)) {
                 return true
-            } else if action == #selector(cut(_:))
+            }
+            else if action == #selector(cut(_:))
                 || action == #selector(select(_:))
-                || action == #selector(selectAll(_:))
-            {
+                || action == #selector(selectAll(_:)) {
                 return false
             }
+
         case .all:
             break
         }
@@ -198,6 +204,9 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
 
     deinit {
         NotificationCenter.default.removeObserver(self)
+        onTextChange = nil
+        editStatusChange = nil
+        returnButtonClickHandler = nil
     }
 }
 
@@ -215,7 +224,9 @@ private extension YSLimitTextField {
     }
 
     func setupLeftPadding() {
-        leftWrapperView.bounds = CGRect(x: 0, y: 0, width: contentInsets.left, height: bounds.size.height)
+        leftWrapperView.bounds = CGRect(
+            x: 0, y: 0, width: contentInsets.left, height: bounds.size.height
+        )
         leftView = leftWrapperView
         leftViewMode = .always
     }
@@ -238,12 +249,15 @@ private extension YSLimitTextField {
         if clearButtonMode == .whileEditing {
             if let _text = text, !_text.isEmpty, isEditing {
                 customClearButton.isHidden = false
-            } else {
+            }
+            else {
                 customClearButton.isHidden = true
             }
-        } else if clearButtonMode == .always {
+        }
+        else if clearButtonMode == .always {
             customClearButton.isHidden = false
-        } else {
+        }
+        else {
             customClearButton.isHidden = true
         }
 
@@ -298,7 +312,8 @@ private extension YSLimitTextField {
     func updateBorderColor() {
         if isEditing {
             layer.borderColor = focusBorderColor != nil ? focusBorderColor!.cgColor : nil
-        } else {
+        }
+        else {
             layer.borderColor = borderColor != nil ? borderColor!.cgColor : nil
         }
     }
@@ -313,24 +328,31 @@ private extension YSLimitTextField {
         switch limitType {
         case .none:
             break
+
         case .numbersOnly:
             processedText = processedText.filter(\.isNumber)
+
         case .lettersOnly:
             processedText = processedText.filter(\.isEnglishLetter)
+
         case .lettersAndNumbers:
-            processedText = processedText.filter { $0.isEnglishLetter || $0.isNumber }    
+            processedText = processedText.filter { $0.isEnglishLetter || $0.isNumber }
+
         case .lettersAndSpacesOnly:
             processedText = processedText.filter { $0.isEnglishLetter || $0.isWhitespace }
+
         case .wordsAndSpacesOnly:
             processedText = processedText.filter { $0.isLetter || $0.isWhitespace }
+
         case .lettersAndPuncturation:
             processedText = processedText
-                .filter { $0.isEnglishLetter || $0.isWhitespace || $0.isEnglishLetterPunctuationOrSpace }
+                    .filter { $0.isEnglishLetter || $0.isWhitespace || $0.isEnglishLetterPunctuationOrSpace }
+
         case .email:
             processedText = processedText.filter(\.isEmailLetter)
-        case .condition(let condition):
+
+        case let .condition(condition):
             processedText = processedText.filter(condition)
-   
         }
 
         switch letterCase {
@@ -344,9 +366,11 @@ private extension YSLimitTextField {
 
         if groupSize > 0 {
             let textWithoutSpaces = processedText.filter { !$0.isWhitespace }
-            let trimmedText = maxLength > 0 ? String(textWithoutSpaces.prefix(maxLength)) : textWithoutSpaces
+            let trimmedText =
+                maxLength > 0 ? String(textWithoutSpaces.prefix(maxLength)) : textWithoutSpaces
             processedText = formatTextWithGrouping(trimmedText, groupSize: groupSize)
-        } else {
+        }
+        else {
             if maxLength > 0, processedText.count > maxLength {
                 processedText = String(processedText.prefix(maxLength))
             }
