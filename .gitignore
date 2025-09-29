@@ -17,6 +17,7 @@ xcuserdata/
 DerivedData
 *.hmap
 *.ipa
+.vscode/
 
 # Bundler
 .bundle
