@@ -96,6 +96,8 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
 
     public var contentInsets: UIEdgeInsets = .zero {
         didSet {
+            setupLeftPadding()
+            updateClearButtonWidth()
             setNeedsDisplay()
         }
     }
@@ -137,10 +139,10 @@ public class YSLimitTextField: UITextField, YSLimitCreateProtocol {
 
     override public func layoutSubviews() {
         super.layoutSubviews()
-
         leftWrapperView.bounds = CGRect(
             x: 0, y: 0, width: contentInsets.left, height: bounds.size.height
         )
+        updateClearButtonWidth()
     }
 
     override public func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -227,8 +229,10 @@ private extension YSLimitTextField {
         leftWrapperView.bounds = CGRect(
             x: 0, y: 0, width: contentInsets.left, height: bounds.size.height
         )
-        leftView = leftWrapperView
-        leftViewMode = .always
+        if leftView == nil {
+            leftView = leftWrapperView
+            leftViewMode = .always
+        }
     }
 
     func setupClearButton() {
@@ -270,6 +274,9 @@ private extension YSLimitTextField {
             let wh: CGFloat = 16.0
             let w = customClearButton.isHidden ? contentInsets.right : wh + margin + contentInsets.right
             clearButtonWrapper.bounds = CGRect(x: 0, y: 0, width: w, height: wh)
+        }
+        else {
+            clearButtonWrapper.bounds = CGRect(x: 0, y: 0, width: contentInsets.right, height: 16.0)
         }
     }
 
@@ -345,7 +352,8 @@ private extension YSLimitTextField {
             processedText = processedText.filter { $0.isLetter || $0.isWhitespace }
 
         case .lettersAndPuncturation:
-            processedText = processedText
+            processedText =
+                processedText
                     .filter { $0.isEnglishLetter || $0.isWhitespace || $0.isEnglishLetterPunctuationOrSpace }
 
         case .email:
@@ -479,6 +487,9 @@ public extension YSLimitCreateProtocol where Self: YSLimitTextField {
     @discardableResult
     func setContentInsets(_ contentInsets: UIEdgeInsets) -> Self {
         self.contentInsets = contentInsets
+        // 立即应用设置，确保在初始化时就能生效
+        setupLeftPadding()
+        updateClearButtonWidth()
         return self
     }
 
